@@ -72,6 +72,8 @@ public class CreateAView {
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
+        sql = "CREATE VIEW firstname_lastname AS SELECT firstname, lastname FROM site_user;";
+
         try {
             Connection connection = ConnectionUtil.getConnection();
             Statement s = connection.createStatement();
